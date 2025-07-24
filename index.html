@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New York Times</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+</head>
+<body>
+    <!-- NYT Header -->
+    <header class="nyt-header">
+        <div class="header-top">
+            <div class="header-section">
+                <span class="date">Wednesday, July 23, 2025</span>
+            </div>
+            <div class="header-section center">
+                <h1 class="nyt-logo">The New York Times</h1>
+            </div>
+            <div class="header-section right">
+                <span class="weather">New York 72°F</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="#">U.S.</a>
+            <a href="#">World</a>
+            <a href="#">Business</a>
+            <a href="#">Technology</a>
+            <a href="#">Science</a>
+            <a href="#">Health</a>
+            <a href="#">Sports</a>
+            <a href="#">Arts</a>
+            <a href="#">Opinion</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="site-content" class="main-content">
+        <!-- Breaking News Banner -->
+        <div class="breaking-news-banner">
+            <div class="breaking-label">BREAKING</div>
+            <div class="breaking-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+        </div>
+
+        <!-- Lead Story Section -->
+        <section class="lead-story-section">
+            <div class="story-grid">
+                <div class="lead-column">
+                    <article class="lead-story">
+                        <div class="story-media">
+                            <div class="image-placeholder">[LEAD STORY IMAGE]</div>
+                        </div>
+                        <div class="story-content">
+                            <h1 class="story-headline">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elite Sed Do Eiusmod Tempor Incididunt</h1>
+                            <p class="story-summary">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="byline">By LOREM IPSUM • 2 hours ago</div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Secondary Stories Column -->
+                <div class="secondary-column">
+                    <article class="secondary-story">
+                        <div class="story-media small">
+                            <div class="image-placeholder">[IMAGE]</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-headline">Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem</h3>
+                            <p class="story-summary">Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                            <div class="byline">By DOLOR SIT • 4 hours ago</div>
+                        </div>
+                    </article>
+
+                    <article class="secondary-story">
+                        <div class="story-content">
+                            <h3 class="story-headline">Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur</h3>
+                            <p class="story-summary">Aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            <div class="byline">By AMET CONSECTETUR • 6 hours ago</div>
+                        </div>
+                    </article>
+
+                    <article class="secondary-story">
+                        <div class="story-content">
+                            <h3 class="story-headline">Neque Porro Quisquam Est Qui Dolorem Ipsum</h3>
+                            <p class="story-summary">Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+                            <div class="byline">By ADIPISCING ELIT • 8 hours ago</div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Third Column -->
+                <div class="third-column">
+                    <article class="featured-story">
+                        <div class="story-media">
+                            <div class="image-placeholder">[FEATURED IMAGE]</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-headline">Ut Labore Et Dolore Magna Aliqua Enim Ad Minim Veniam Quis</h3>
+                            <p class="story-summary">Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                            <div class="byline">By TEMPOR INCIDIDUNT • 1 hour ago</div>
+                        </div>
+                    </article>
+
+                    <!-- Opinion Section -->
+                    <div class="opinion-section">
+                        <h4 class="section-header">Opinion</h4>
+                        <article class="opinion-story">
+                            <div class="story-content">
+                                <h3 class="story-headline">Temporibus Autem Quibusdam Et Aut Officiis</h3>
+                                <p class="story-summary">Debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                <div class="byline">By OPINION WRITER • 7 hours ago</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <canvas id="canvas"></canvas><div><button onclick="zeroG()">Zero G!</button></div>
+        <!-- More Stories Section -->
+        <section class="more-stories-section">
+            <div class="section-divider"></div>
+            <div class="stories-grid">
+                <article class="grid-story">
+                    <div class="story-media">
+                        <div class="image-placeholder">[IMAGE]</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-headline">Et Harum Quidem Rerum Facilis Est Et Expedita Distinctio</h3>
+                        <p class="story-summary">Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.</p>
+                        <div class="byline">By FACILIS EST • 3 hours ago</div>
+                    </div>
+                </article>
+
+                <article class="grid-story">
+                    <div class="story-media">
+                        <div class="image-placeholder">[IMAGE]</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-headline">At Vero Eos Et Accusamus Et Iusto Odio Dignissimos</h3>
+                        <p class="story-summary">Ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</p>
+                        <div class="byline">By NEWS REPORTER • 9 hours ago</div>
+                    </div>
+                </article>
+
+                <article class="grid-story">
+                    <div class="story-media">
+                        <div class="image-placeholder">[IMAGE]</div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-headline">Excepturi Sint Occaecati Cupiditate Non Provident</h3>
+                        <p class="story-summary">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                        <div class="byline">By MOLESTIAS EXCEPTURI • 11 hours ago</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Phaser game container -->
+    <div id="phaser-container"></div>
+    
+    <script src="character.js"></script>
+</body>
+</html>
