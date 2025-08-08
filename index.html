@@ -47,8 +47,12 @@
             <div class="story-grid">
                 <div class="lead-column">
                     <article class="lead-story">
-                        <div class="story-media">
-                            <div class="image-placeholder">[LEAD STORY IMAGE]</div>
+                        <button onclick="repairCloth()" style="font-size: 20px; border: none; cursor: pointer; background-color: white; text-align: right;margin-bottom:-20px">🪡</button>    
+                        <div class="story-media" style="position: relative;">
+                            <div class="image-placeholder" style="position: relative;">
+                                <img src="assets/house.webp" alt="Lead Story Image" style="width: 100%; height: 100%; display: block;">
+                            </div>
+                            <canvas id="canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
                         </div>
                         <div class="story-content">
                             <h1 class="story-headline">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elite Sed Do Eiusmod Tempor Incididunt</h1>
@@ -61,7 +65,6 @@
                 <!-- Secondary Stories Column -->
                 <div class="secondary-column">
                     <article class="secondary-story">
-                        <div class="story-media small">
                             <div class="image-placeholder">[IMAGE]</div>
                         </div>
                         <div class="story-content">
@@ -115,7 +118,10 @@
                 </div>
             </div>
         </section>
-        <canvas id="canvas"></canvas><div><button onclick="zeroG()">Zero G!</button></div>
+        <div style="margin: 10px 0;">
+            <button onclick="zeroG()" style="margin-right: 10px; padding: 8px 16px; font-size: 14px;">Zero G!</button>
+            <button onclick="repairCloth()" style="padding: 8px 16px; font-size: 14px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Repair Cloth</button>
+        </div>
         <!-- More Stories Section -->
         <section class="more-stories-section">
             <div class="section-divider"></div>
@@ -159,6 +165,6 @@
     <!-- Phaser game container -->
     <div id="phaser-container"></div>
     
-    <script src="character.js"></script>
+    <script src="cloth.js"></script>
 </body>
 </html>
